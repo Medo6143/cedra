@@ -3,7 +3,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { i18n } from "@/lib/i18n";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import logoPath from "@assets/WhatsApp_Image_2026-06-01_at_21.16.04_(1)_1780344304823.jpeg";
+import logoPath from "@assets/cedar-logo.jfif";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
@@ -22,6 +22,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: t.home, href: "#home" },
+    { name: t.about, href: "#about" },
     { name: t.services, href: "#services" },
     { name: t.systems, href: "#systems" },
     { name: t.why, href: "#why" },

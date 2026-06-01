@@ -2,6 +2,7 @@ export const i18n = {
   ar: {
     nav: {
       home: "الرئيسية",
+      about: "من نحن",
       services: "خدماتنا",
       systems: "أنظمة التشطيب",
       why: "لماذا سيدار",
@@ -74,10 +75,10 @@ export const i18n = {
       subtitle: "تصفح مجموعة من مشاريعنا التي نفخر بها",
       categories: {
         all: "الكل",
-        living: "غرف المعيشة",
-        bedroom: "غرف النوم",
-        kitchen: "المطابخ",
         bath: "الحمامات",
+        bed: "غرف النوم",
+        kit: "المطابخ",
+        living: "غرف المعيشة",
         office: "المكاتب"
       }
     },
@@ -91,6 +92,16 @@ export const i18n = {
         social: "تابعنا على"
       }
     },
+    about: {
+      title: "من نحن",
+      subtitle: "CEDAR للتصميم الداخلي والديكور",
+      description1: "نحن شركة رائدة في مجال التصميم الداخلي والديكور، نقدم حلولاً مبتكرة وأنيقة لتحويل منزلك إلى مساحة تعكس شخصيتك وتلبي احتياجاتك.",
+      description2: "فريقنا من المصممين المحترفين يمتلك خبرة واسعة في تصميم المساحات السكنية والتجارية مع التركيز على الجودة والتفاصيل الدقيقة.",
+      description3: "نلتزم بتقديم أفضل الخدمات مع الحفاظ على أعلى معايير الجودة والالتزام بالمواعيد المحددة.",
+      yearsExperience: "سنوات خبرة",
+      projectsCompleted: "مشروع منجز",
+      clientSatisfaction: "رضا العملاء"
+    },
     footer: {
       tagline: "سيدار للتصميم الداخلي والديكور - فخامة تليق بك",
       rights: "جميع الحقوق محفوظة لسيدار © "
@@ -99,6 +110,7 @@ export const i18n = {
   en: {
     nav: {
       home: "Home",
+      about: "About",
       services: "Services",
       systems: "Systems",
       why: "Why Us",
@@ -171,10 +183,10 @@ export const i18n = {
       subtitle: "Browse a selection of our projects that we are proud of",
       categories: {
         all: "All",
-        living: "Living Rooms",
-        bedroom: "Bedrooms",
-        kitchen: "Kitchens",
         bath: "Bathrooms",
+        bed: "Bedrooms",
+        kit: "Kitchens",
+        living: "Living Rooms",
         office: "Offices"
       }
     },
@@ -187,6 +199,16 @@ export const i18n = {
         email: "Email",
         social: "Follow Us"
       }
+    },
+    about: {
+      title: "About Us",
+      subtitle: "CEDAR Interior Design & Decoration",
+      description1: "We are a leading company in interior design and decoration, offering innovative and elegant solutions to transform your home into a space that reflects your personality and meets your needs.",
+      description2: "Our team of professional designers has extensive experience in designing residential and commercial spaces with a focus on quality and attention to detail.",
+      description3: "We are committed to providing the best services while maintaining the highest quality standards and adhering to scheduled deadlines.",
+      yearsExperience: "Years Experience",
+      projectsCompleted: "Projects Completed",
+      clientSatisfaction: "Client Satisfaction"
     },
     footer: {
       tagline: "CEDAR Interior Design & Decoration - Luxury You Deserve",

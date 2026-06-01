@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import StatsCounter from "@/components/StatsCounter";
+import About from "@/components/About";
 import Services from "@/components/Services";
 import FinishingSystems from "@/components/FinishingSystems";
 import WhyCedar from "@/components/WhyCedar";
@@ -15,6 +16,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <About />
         <StatsCounter />
         <Services />
         <FinishingSystems />

@@ -1,7 +1,7 @@
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { i18n } from "@/lib/i18n";
-import logoPath from "@assets/WhatsApp_Image_2026-06-01_at_21.16.04_(1)_1780344304823.jpeg";
+import logoPath from "@assets/cedar-logo.jfif";
 
 export default function Footer() {
   const { language } = useLanguage();

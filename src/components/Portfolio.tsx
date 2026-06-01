@@ -4,45 +4,27 @@ import { useLanguage } from "@/context/LanguageContext";
 import { i18n } from "@/lib/i18n";
 import SectionHeading from "./SectionHeading";
 import PortfolioLightbox from "./PortfolioLightbox";
-import work1Path from "@/assets/work-1.png";
-import work2Path from "@/assets/work-2.png";
-import work3Path from "@/assets/work-3.png";
-import work4Path from "@/assets/work-4.png";
-import work5Path from "@/assets/work-5.png";
-import work6Path from "@/assets/work-6.png";
 
-const portfolioItems = [
-  {
-    image: work1Path,
-    category: "kitchen",
-    images: [work1Path, work3Path, work5Path],
-  },
-  {
-    image: work2Path,
-    category: "living",
-    images: [work2Path, work4Path, work6Path],
-  },
-  {
-    image: work3Path,
-    category: "bath",
-    images: [work3Path, work1Path, work2Path],
-  },
-  {
-    image: work4Path,
-    category: "living",
-    images: [work4Path, work2Path, work5Path],
-  },
-  {
-    image: work5Path,
-    category: "office",
-    images: [work5Path, work6Path, work1Path],
-  },
-  {
-    image: work6Path,
-    category: "bedroom",
-    images: [work6Path, work4Path, work3Path],
-  },
-];
+// Create portfolio items with categories - using @assets alias
+const portfolioItems = Array.from({ length: 222 }, (_, i) => {
+  const index = i + 1;
+  let category: string;
+  
+  // Distribute images across categories
+  if (index <= 74) {
+    category = "bath"; // bathroom
+  } else if (index <= 148) {
+    category = "bed"; // bedroom
+  } else {
+    category = "kit"; // kitchen
+  }
+  
+  return {
+    image: new URL(`../assets/work-${index}.jpeg`, import.meta.url).href,
+    category: category,
+    images: [new URL(`../assets/work-${index}.jpeg`, import.meta.url).href],
+  };
+});
 
 export default function Portfolio() {
   const { language } = useLanguage();
@@ -68,7 +50,7 @@ export default function Portfolio() {
         <SectionHeading title={t.title} subtitle={t.subtitle} />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
-          {portfolioItems.map((item, index) => (
+          {portfolioItems.slice(0, 6).map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.97 }}
@@ -121,18 +103,21 @@ export default function Portfolio() {
           ))}
         </div>
 
-        {/* View more hint */}
-        <motion.p
+        {/* View All button */}
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="text-center text-white/30 text-sm tracking-widest uppercase mt-10"
+          className="text-center mt-10"
         >
-          {language === "ar"
-            ? "اضغط على أي صورة لعرض المزيد"
-            : "Click any image to view gallery"}
-        </motion.p>
+          <a
+            href="/works"
+            className="inline-block bg-primary text-black px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-colors"
+          >
+            {language === "ar" ? "عرض جميع الأعمال" : "View All Works"}
+          </a>
+        </motion.div>
       </div>
 
       <PortfolioLightbox
